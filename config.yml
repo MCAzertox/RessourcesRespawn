@@ -1,0 +1,42 @@
+#For particles, please use: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+#For sounds, please use: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+#For materials, please use: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+
+blocks:
+  wand-material: WOODEN_PICKAXE
+  default-delay: 40 #In ticks (20 ticks = 1 second)
+  default-sound: BLOCK_NOTE_BLOCK_PLING
+  default-particles-on-break: NONE
+  default-particles-on-respawn: NONE
+  items-to-inventory: true
+  blacklist-items:
+    firstItem:
+      material: WOODEN_PICKAXE
+      name: "NONE" #If name = "NONE" --> item name is ignored
+  override:
+    STONE:
+      delay: 20
+      replaced-by: BEDROCK
+      sound: NONE
+    GRASS:
+      delay: 20
+      replaced-by: BEDROCK
+      sound: NONE
+    DIAMOND_ORE:
+      delay: 100
+      replaced-by: BEDROCK
+      particles-on-break: CRIT
+      particles-on-respawn: CRIT
+      sound: BLOCK_NOTE_BLOCK_PLING
+
+worldguard-regions:
+  aworld:
+    MyRegion:
+      whitelisted-blocks:
+        - "STONE"
+  world:
+    Spawn:
+      whitelisted-blocks:
+        - "NONE"
+
+blacklist-message: "&cThis item is blacklisted for this zone !"

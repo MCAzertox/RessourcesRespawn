@@ -1,0 +1,9 @@
+name: RessourcesRespawn
+version: 1.0
+author: MCAzertox
+main: fr.mcazertox.ressourcesrespawn.RessourcesRespawn
+api-version: 1.16
+commands:
+  rr:
+    description: "RessourcesRespawn Help"
+    usage: "Type /rr for help !"
